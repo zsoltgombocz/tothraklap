@@ -17,6 +17,13 @@ html body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+}
+
+.palyazat-section {
+    width: 100% !important;
+    position: relative;
 }
 
 .parallax-one {
@@ -146,6 +153,10 @@ html body{
     margin-right: 50px;
 }
 
+.vl.absolute {
+    position: absolute;
+}
+
 .arrow-holder{
     margin-top: 30px;
     font-size: 50px;
@@ -259,6 +270,52 @@ html body{
     transition: ease-in-out 300ms;
 }
 
+.szechenyi-logo {
+    transition: right 400ms;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    width: 300px;
+}
+
+.szechenyi-logo-top {
+    transition: right 400ms;
+    position: fixed;
+    top: 95px;
+    right: 0;
+    z-index: 999;
+    width: 300px;
+}
+
+.szechenyi-logo.hidden {
+    transition: right 400ms;
+    right: -1000px !important;
+}
+.link-to-palyazat {
+    transition: all 300ms;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 20px;
+}
+a.link-to-palyazat:link {
+    color: black;
+    text-decoration: none;
+}
+a.link-to-palyazat:visited {
+    color: black;
+    text-decoration: none;
+}
+a.link-to-palyazat:hover {
+    transition: all 300ms;
+    color: #e78b21;
+    text-decoration: none;
+}
+a.link-to-palyazat:active {
+    color: black;
+    text-decoration: none;
+}
+
 
 @keyframes bounce {
     0%   { transform: translateY(0); }
@@ -266,23 +323,16 @@ html body{
     100% { transform: translateY(0); }
 }
 
-  
-  
-@media (min-width: 576) {  
 
-}
-
-@media (min-width: 768) {
-    .cim h4 {
-        font-size: 28px;
-        margin-top: 200px;
-    }
-
-    .cim h2 {
-        font-size: 120px;
+@media (min-width: 576px) {
+    .szechenyi-logo-top {
+        width: 200px;
     }
 }
 @media (min-width: 768px) {
+    .szechenyi-logo-top {
+        width: 250px;
+    }
     .cim h4 {
         font-size: 28px;
         margin-top: 200px;
@@ -292,6 +342,9 @@ html body{
     }  
 }
 @media (min-width: 992px) {
+    .szechenyi-logo-top {
+        width: 300px;
+    }
     .cim h4 {
         font-size: 28px;
         margin-top: 200px;
